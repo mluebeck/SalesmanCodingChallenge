@@ -24,6 +24,8 @@
 		8CB5A0552AF7D4D9002BAEF9 /* SalesmanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0542AF7D4D9002BAEF9 /* SalesmanViewModel.swift */; };
 		8CB5A0562AF7D4D9002BAEF9 /* SalesmanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0542AF7D4D9002BAEF9 /* SalesmanViewModel.swift */; };
 		8CB5A0582AF7D89E002BAEF9 /* SalesmanViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0572AF7D89E002BAEF9 /* SalesmanViewModelTest.swift */; };
+		8CB5A05E2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A05D2AF7EB92002BAEF9 /* SalesmanListViewModel.swift */; };
+		8CB5A05F2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A05D2AF7EB92002BAEF9 /* SalesmanListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 		8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeExpressionTests.swift; sourceTree = "<group>"; };
 		8CB5A0542AF7D4D9002BAEF9 /* SalesmanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanViewModel.swift; sourceTree = "<group>"; };
 		8CB5A0572AF7D89E002BAEF9 /* SalesmanViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanViewModelTest.swift; sourceTree = "<group>"; };
+		8CB5A05D2AF7EB92002BAEF9 /* SalesmanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				8CB5A0542AF7D4D9002BAEF9 /* SalesmanViewModel.swift */,
+				8CB5A05D2AF7EB92002BAEF9 /* SalesmanListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -297,6 +301,7 @@
 			files = (
 				8CB5A01E2AF7A4BA002BAEF9 /* ContentView.swift in Sources */,
 				8CB5A04A2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
+				8CB5A05E2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */,
 				8CB5A0552AF7D4D9002BAEF9 /* SalesmanViewModel.swift in Sources */,
 				8CB5A04D2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
 				8CB5A01C2AF7A4BA002BAEF9 /* SalesmanApp.swift in Sources */,
@@ -310,6 +315,7 @@
 			files = (
 				8CB5A0532AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift in Sources */,
 				8CB5A04B2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
+				8CB5A05F2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */,
 				8CB5A0562AF7D4D9002BAEF9 /* SalesmanViewModel.swift in Sources */,
 				8CB5A0582AF7D89E002BAEF9 /* SalesmanViewModelTest.swift in Sources */,
 				8CB5A04E2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,

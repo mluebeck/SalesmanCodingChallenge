@@ -6,19 +6,34 @@
 //
 
 import SwiftUI
+import Combine 
+
+ 
 
 struct ContentView: View {
+    
+    @StateObject var viewModel : SalesmanListViewModel 
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            TextField("Filtern", text: $viewModel.filterText)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+
+            List(viewModel.filteredItems, id: \.self) { item in
+                HStack {
+                    Text(SalesManViewModel(salesman: item).capital)
+                    VStack {
+                        Text(SalesManViewModel(salesman: item).name)
+                        Text(SalesManViewModel(salesman: item).zipcodes)
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(viewModel:SalesmanListViewModel(salesmenStore:SalesmenStore().addSalesmen(SalesmenStore.createTestData())))
 }
+
+ 
