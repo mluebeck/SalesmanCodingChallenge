@@ -20,6 +20,10 @@ Da SwiftUI noch relativ neu für mich ist, hat Google, StackOverflow und ChatGPT
 der SalesmenStore wird in der SalesmanApp - struct initialisiert und dem ViewModel übergeben, welches an die ContentView übergeben wird (Dependency injection in der CompositionRoot). 
 Somit war kein Singleton notwendig. 
 
+Da nur das UI-Design für Android verfügbar war, habe ich mich soweit es ging und es SwiftUI erlaubte, daran gehalten. UI-Tests habe ich mir erspart, die dauern viel zu lange. Snapshot-Tests wären da geeigneter, das wäre noch drin gewesen, aber irgendwann muss ja mal Schluss sein ;)
+
+
+
 
 
 
