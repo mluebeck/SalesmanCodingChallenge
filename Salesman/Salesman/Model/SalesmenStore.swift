@@ -36,4 +36,13 @@ public class SalesmenStore {
     func addSalesman(_ value:Salesman ) {
         self.salesmen.append(value)
     }
+    
+    static func createTestData() -> [Salesman] {
+        var array = [Salesman]()
+        array.append(Salesman(name: "Artem Titarenko", areas: ["76133"]))
+        array.append(Salesman(name: "Bernd Schmitt", areas: ["7619*"]))
+        array.append(Salesman(name: "Chris Krapp", areas: ["762*"]))
+        array.append(Salesman(name: "Alex Uber", areas: ["86*"]))
+        return array
+    }
 }
