@@ -7,19 +7,33 @@
 
 import Foundation
 
-public class SalesmenStore {
-    var salesmen = [String]()
+public class Salesman {
+    var name : String
+    var areas : [String]
     
-    func getItems()->[String] {
-        return ["a value"]
+    init(name: String, areas: [String]) {
+        self.name = name
+        self.areas = areas
+    }
+    
+    static func createDefaultSalesman() -> Salesman {
+        return Salesman(name: "Vorname Nachname", areas: [])
+    }
+}
+
+public class SalesmenStore {
+    var salesmen = [Salesman]()
+    
+    func getItems()->[Salesman] {
+        return salesmen
     }
     
     func createADummySalesman() {
-        let salesman = "A Salesman"
+        let salesman = Salesman.createDefaultSalesman()
         self.addSalesman(salesman)
     }
     
-    func addSalesman(_ value:String ) {
+    func addSalesman(_ value:Salesman ) {
         self.salesmen.append(value)
     }
 }

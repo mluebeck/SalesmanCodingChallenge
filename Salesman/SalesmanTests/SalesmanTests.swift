@@ -23,19 +23,27 @@ final class SalesmanTests: XCTestCase {
         XCTAssertNotNil(store,"Store exists")
     }
     
-    func test_SalesmenStore_getStoremen_items() throws {
+    func test_SalesmenStore_getItems_returnsAnItem() throws {
         let store = SalesmenStore()
         store.createADummySalesman()
         let items = store.getItems()
         XCTAssertTrue(items.count==1,"Storemen getItems Method returns one item")
     }
     
-    func test_SalesmenStore_returnsSalesmanObjects()throws {
+    func test_SalesmenStore_getItems_returnsItems()throws {
         let store = SalesmenStore()
         let items = store.getItems()
         XCTAssertTrue(items.count>=0,"Storemen getItems Method returns zero or more items")
     }
-
+    
+    func test_SalesmenStore_returnsASalesmanObject()throws {
+        let store = SalesmenStore()
+        let dummySalesman = Salesman.createDefaultSalesman()
+        store.createADummySalesman()
+        let items = store.getItems()
+        XCTAssertTrue(items.count==1 && items.first?.name == dummySalesman.name,"Storemen getItems Method returns a dummy salesman")
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
