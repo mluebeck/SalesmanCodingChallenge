@@ -48,7 +48,18 @@ public class SalesmenStore {
     
     static func createTestData() -> [Salesman] {
         var array = [Salesman]()
-        array.append(Salesman(name: "Artem Titarenko", areas: ["76133","75000","61000", "23613"]))
+        array.append(Salesman(name: "Artem Titarenko", areas: ["76133","75000","61000", "23613","12345"]))
+        array.append(Salesman(name: "Bernd Schmitt", areas: ["7619*","1234*"]))
+        array.append(Salesman(name: "Chris Krapp", areas: ["762*","123*"]))
+        array.append(Salesman(name: "Alex Uber", areas: ["86*","12*"]))
+        array.append(Salesman(name: "Mario Rotz", areas: ["86*","1*"]))
+        array.append(Salesman(name: "Frauke Reiche", areas: ["86*","*"]))
+        return array
+    }
+    
+    static func createProdData() -> [Salesman] {
+        var array = [Salesman]()
+        array.append(Salesman(name: "Artem Titarenko", areas: ["76133"]))
         array.append(Salesman(name: "Bernd Schmitt", areas: ["7619*"]))
         array.append(Salesman(name: "Chris Krapp", areas: ["762*"]))
         array.append(Salesman(name: "Alex Uber", areas: ["86*"]))
