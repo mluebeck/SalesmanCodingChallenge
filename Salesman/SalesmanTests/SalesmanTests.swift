@@ -64,10 +64,23 @@ final class SalesmanTests: XCTestCase {
         
     }
     
-    func test_SalesmenStore_filter_returns_zeroOrMoreStoremen()throws {
+    func test_SalesmenStore_filter_returns_4Storemen()throws {
         let store = self.makeSalesmenStoreUnderTest()
-        let storemen = store.filter(postcodeExpression:"76133")
-        XCTAssertTrue(storemen.count>=0, "find zero or more storeman")
+        let storemen = store.filter(postcodeExpression:"76")
+        XCTAssertTrue(storemen.count==3, "should find 3 storeman, found \(storemen.count)")
+    }
+    
+    func test_SalesmenStore_filter_returns_1Storemen()throws {
+        let store = self.makeSalesmenStoreUnderTest()
+        let storemen = store.filter(postcodeExpression:"86")
+        XCTAssertTrue(storemen.count==1, "should find 1 storeman, found \(storemen.count)")
+    }
+    
+    func test_SalesmenStore_filter_returnsSuitableElements() throws {
+        let store = self.makeSalesmenStoreUnderTest()
+        let storemen = store.filter(postcodeExpression: "1")
+        XCTAssertTrue(storemen.count==0, "find zero   storeman")
+
     }
     
     func test_SalesmenStore_filterWithInvalidParameter() throws {

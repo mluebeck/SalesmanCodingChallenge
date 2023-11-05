@@ -31,7 +31,16 @@ public class SalesmenStore {
     }
     
     func filter(postcodeExpression:String)->[Salesman] {
-        return [Salesman]()
+        var resultSalesmen = [Salesman]()
+        self.salesmen.forEach {
+            let result = $0.areas.filter {
+                $0.starts(with: postcodeExpression)
+            }
+            if result.count>0 {
+                resultSalesmen.append($0)
+            }
+        }
+        return resultSalesmen
     }
     
     static func createTestData() -> [Salesman] {
