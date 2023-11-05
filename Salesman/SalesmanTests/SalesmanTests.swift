@@ -50,18 +50,32 @@ final class SalesmanTests: XCTestCase {
         store.addSalesmen(testData)
         let items = store.getItems()
         XCTAssertTrue(items.count==testData.count,"SalesmenStore getItems Method returns correct amount of test data")
-        XCTAssertTrue(items[0].name == "Artem Titarenko", "SalesmenStore getItems Method returns correct first salesman")
-        XCTAssertTrue(items[1].name == "Bernd Schmitt", "SalesmenStore getItems Method returns correct second salesman")
-        XCTAssertTrue(items[2].name == "Chris Krapp", "SalesmenStore getItems Method returns correct third salesman")
-        XCTAssertTrue(items[3].name == "Alex Uber", "SalesmenStore getItems Method returns correct fourth salesman")
+        XCTAssertTrue(items[0].name == testData[0].name && testData[0].name == "Artem Titarenko", "SalesmenStore getItems Method returns correct first salesman name")
+        XCTAssertTrue(items[1].name == testData[1].name && testData[1].name == "Bernd Schmitt", "SalesmenStore getItems Method returns correct second salesman name")
+        XCTAssertTrue(items[2].name == testData[2].name && testData[2].name == "Chris Krapp", "SalesmenStore getItems Method returns correct third salesman name")
+        XCTAssertTrue(items[3].name == testData[3].name && testData[3].name == "Alex Uber", "SalesmenStore getItems Method returns correct fourth salesman name")
         
         XCTAssertTrue(items[0].areas == ["76133"] && testData[0].areas==items[0].areas, "SalesmenStore getItems Method returns correct first areas")
         XCTAssertTrue(items[1].areas == ["7619*"] && testData[1].areas==items[1].areas, "SalesmenStore getItems Method returns correct second areas")
         XCTAssertTrue(items[2].areas == ["762*"] && testData[2].areas==items[2].areas, "SalesmenStore getItems Method returns correct third areas")
         XCTAssertTrue(items[3].areas == ["86*"] && testData[3].areas==items[3].areas, "SalesmenStore getItems Method returns correct fourth areas")
-   
+        
     }
     
     
+    func test_SalesmenStore_filter_returns_zeroOrMoreStoremen()throws {
+        let store = self.makeSalesmenStoreUnderTest()
+        let storemen = store.filter(postcodeExpression:"76133")
+        XCTAssertTrue(storemen.count>=0, "find zero or more storeman")
+    }
      
+    //MARK: Helper Methods
+    
+    private func makeSalesmenStoreUnderTest() -> SalesmenStore {
+        let store = SalesmenStore()
+        let testData = SalesmenStore.createTestData()
+        store.addSalesmen(testData)
+        return store
+    }
+    
 }
