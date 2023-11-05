@@ -15,7 +15,7 @@ extension NSRegularExpression {
 
 extension String {
     func isValidPostcodeExpression()->Bool {
-        if self.count==0 || self.count>5 {
+        if self.count==0 || self.count>5 || self.starts(with: "00"){
             return false
         } else {
             var pattern = "[0-9]{5}"

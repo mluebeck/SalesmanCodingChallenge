@@ -49,8 +49,8 @@ final class PostcodeExpressionTests: XCTestCase {
         XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
         postcode = "*"
         XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
-
-  }
+        
+    }
     
     func test_postcodeExpressionIsInvalid() throws {
         var postcode = "abcde"
@@ -70,6 +70,14 @@ final class PostcodeExpressionTests: XCTestCase {
         postcode = "2334**"
         XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
         postcode = "**"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
+        postcode = "00"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
+        postcode = "00123"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
+        postcode = "0012*"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
+        postcode = "00*"
         XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
     }
 }
