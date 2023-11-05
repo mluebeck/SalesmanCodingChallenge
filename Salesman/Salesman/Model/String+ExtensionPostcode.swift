@@ -12,18 +12,19 @@ extension NSRegularExpression {
         return firstMatch(in: string, options: [], range: range) != nil
     }
 }
+
 extension String {
     func isValidPostcodeExpression()->Bool {
         if self.count==0 || self.count>5 {
             return false
+        } else {
+            var pattern = "[0-9]{5}"
+            if self.count>0 && self.count<5 {
+                pattern = "[0-9]{\(self.count-1)}[*]"
+            }
+            let regex = try! NSRegularExpression(pattern: pattern)
+            let value =  regex.matches(self)
+            return value
         }
-        
-        var pattern = "[1-9]{5}"
-        if self.count>0 && self.count<5 {
-            pattern = "[1-9]{\(self.count-1)}[*]"
-        }
-        let regex = try! NSRegularExpression(pattern: pattern)
-        let value =  regex.matches(self)
-        return value
     }
 }

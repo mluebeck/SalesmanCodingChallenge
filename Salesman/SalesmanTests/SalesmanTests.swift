@@ -45,6 +45,8 @@ final class PostcodeExpressionTests: XCTestCase {
         XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
         postcode = "*abc"
         XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
+        postcode = "100*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
     }
 }
 
