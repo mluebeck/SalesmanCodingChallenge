@@ -46,7 +46,7 @@ public class SalesmenStore {
         return resultSalesmen
     }
     
-    static func createTestData() -> [Salesman] {
+    static func createTestDataForPlaceholderTests() -> [Salesman] {
         var array = [Salesman]()
         array.append(Salesman(name: "Artem Titarenko", areas: ["76133","75000","61000", "23613","12345"]))
         array.append(Salesman(name: "Bernd Schmitt", areas: ["7619*","1234*"]))
@@ -57,7 +57,7 @@ public class SalesmenStore {
         return array
     }
     
-    static func createProdData() -> [Salesman] {
+    static func createTestData() -> [Salesman] {
         var array = [Salesman]()
         array.append(Salesman(name: "Artem Titarenko", areas: ["76133"]))
         array.append(Salesman(name: "Bernd Schmitt", areas: ["7619*"]))
