@@ -10,19 +10,41 @@ import XCTest
 
 
 final class PostcodeExpressionTests: XCTestCase {
+    
     func test_postcodeExpressionLengthIsValid() throws {
         var postcode = "12345"
-        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
         postcode = "123456"
-        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should fail ")
+        postcode = "1234567"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should fail ")
         postcode = "123*"
-        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
         postcode = "12*"
-        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
         postcode = "1*"
-        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
         postcode = "*"
-        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
+        postcode = ""
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should fail ")
+    }
+    
+    func test_postcodeExpressionIsValid() throws {
+        var postcode = "12345"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should pass ")
+        postcode = "abcde"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
+        postcode = "abc*"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail")
+        postcode = "12**"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
+        postcode = ""
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
+        postcode = "*123"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
+        postcode = "*abc"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
     }
 }
 
