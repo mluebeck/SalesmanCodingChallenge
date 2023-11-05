@@ -14,6 +14,8 @@
 		8CB5A02D2AF7A4BB002BAEF9 /* SalesmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A02C2AF7A4BB002BAEF9 /* SalesmanTests.swift */; };
 		8CB5A0372AF7A4BB002BAEF9 /* SalesmanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0362AF7A4BB002BAEF9 /* SalesmanUITests.swift */; };
 		8CB5A0392AF7A4BB002BAEF9 /* SalesmanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0382AF7A4BB002BAEF9 /* SalesmanUITestsLaunchTests.swift */; };
+		8CB5A0462AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */; };
+		8CB5A0472AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		8CB5A0322AF7A4BB002BAEF9 /* SalesmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesmanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB5A0362AF7A4BB002BAEF9 /* SalesmanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanUITests.swift; sourceTree = "<group>"; };
 		8CB5A0382AF7A4BB002BAEF9 /* SalesmanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmenStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 				8CB5A01D2AF7A4BA002BAEF9 /* ContentView.swift */,
 				8CB5A01F2AF7A4BB002BAEF9 /* Assets.xcassets */,
 				8CB5A0212AF7A4BB002BAEF9 /* Preview Content */,
+				8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */,
 			);
 			path = Salesman;
 			sourceTree = "<group>";
@@ -259,6 +263,7 @@
 			files = (
 				8CB5A01E2AF7A4BA002BAEF9 /* ContentView.swift in Sources */,
 				8CB5A01C2AF7A4BA002BAEF9 /* SalesmanApp.swift in Sources */,
+				8CB5A0462AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CB5A02D2AF7A4BB002BAEF9 /* SalesmanTests.swift in Sources */,
+				8CB5A0472AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
