@@ -47,9 +47,7 @@ final class SalesmanTests: XCTestCase {
     func test_SalesmenStore_generateAndReturnsTestData()throws {
         let store = SalesmenStore()
         let testData = SalesmenStore.createTestData()
-        testData.forEach {
-            store.addSalesman($0)
-        }
+        store.addSalesmen(testData)
         let items = store.getItems()
         XCTAssertTrue(items.count==testData.count,"SalesmenStore getItems Method returns correct amount of test data")
         XCTAssertTrue(items[0].name == "Artem Titarenko", "SalesmenStore getItems Method returns correct first salesman")
