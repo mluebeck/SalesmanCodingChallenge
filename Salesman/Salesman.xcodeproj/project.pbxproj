@@ -16,6 +16,10 @@
 		8CB5A0392AF7A4BB002BAEF9 /* SalesmanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0382AF7A4BB002BAEF9 /* SalesmanUITestsLaunchTests.swift */; };
 		8CB5A0462AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */; };
 		8CB5A0472AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */; };
+		8CB5A04A2AF7B7C8002BAEF9 /* Salesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */; };
+		8CB5A04B2AF7B7C8002BAEF9 /* Salesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */; };
+		8CB5A04D2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */; };
+		8CB5A04E2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,8 @@
 		8CB5A0362AF7A4BB002BAEF9 /* SalesmanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanUITests.swift; sourceTree = "<group>"; };
 		8CB5A0382AF7A4BB002BAEF9 /* SalesmanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmenStore.swift; sourceTree = "<group>"; };
+		8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesman.swift; sourceTree = "<group>"; };
+		8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtensionPostcode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */,
+				8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */,
+				8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CB5A01E2AF7A4BA002BAEF9 /* ContentView.swift in Sources */,
+				8CB5A04A2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
+				8CB5A04D2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
 				8CB5A01C2AF7A4BA002BAEF9 /* SalesmanApp.swift in Sources */,
 				8CB5A0462AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */,
 			);
@@ -279,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB5A04B2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
+				8CB5A04E2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
 				8CB5A02D2AF7A4BB002BAEF9 /* SalesmanTests.swift in Sources */,
 				8CB5A0472AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */,
 			);

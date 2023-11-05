@@ -8,16 +8,34 @@
 import XCTest
 @testable import Salesman
 
-final class SalesmanTests: XCTestCase {
 
+final class PostcodeExpressionTests: XCTestCase {
+    func test_postcodeExpressionLengthIsValid() throws {
+        var postcode = "12345"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        postcode = "123456"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        postcode = "123*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        postcode = "12*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        postcode = "1*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+        postcode = "*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) is valid ")
+    }
+}
+
+final class SalesmanTests: XCTestCase {
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     func test_SalesmenStoreExists() throws {
         let store = SalesmenStore()
         XCTAssertNotNil(store,"Store exists")

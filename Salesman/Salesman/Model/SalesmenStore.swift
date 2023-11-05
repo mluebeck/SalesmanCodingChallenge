@@ -7,19 +7,7 @@
 
 import Foundation
 
-public class Salesman {
-    var name : String
-    var areas : [String]
-    
-    init(name: String, areas: [String]) {
-        self.name = name
-        self.areas = areas
-    }
-    
-    static func createDefaultSalesman() -> Salesman {
-        return Salesman(name: "Vorname Nachname", areas: [])
-    }
-}
+
 
 public class SalesmenStore {
     var salesmen = [Salesman]()
@@ -39,6 +27,10 @@ public class SalesmenStore {
     
     func addSalesmen(_ array:[Salesman]) {
         self.salesmen.append(contentsOf: array)
+    }
+    
+    func filter(postcodeExpression:String)->[Salesman] {
+        return [Salesman]()
     }
     
     static func createTestData() -> [Salesman] {
