@@ -8,7 +8,17 @@
 import SwiftUI
 import Combine 
 
- 
+extension Color {
+  init(_ hex: UInt, alpha: Double = 1) {
+    self.init(
+      .sRGB,
+      red: Double((hex >> 16) & 0xFF) / 255,
+      green: Double((hex >> 8) & 0xFF) / 255,
+      blue: Double(hex & 0xFF) / 255,
+      opacity: alpha
+    )
+  }
+}
 
 struct ContentView: View {
     
@@ -33,28 +43,68 @@ struct ContentView: View {
                 if viewModel.isExpanded(item: item)
                 {
                     HStack {
-                        Text(SalesManViewModel(salesman: item).capital)
-                        
-                        VStack {
-                            Text(SalesManViewModel(salesman: item).name)
-                            Text(SalesManViewModel(salesman: item).zipcodes)
+                        ZStack {
+                            Circle()
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(Color(0xefefef)) // Grauer Kreis
+                                .overlay {
+                                    Circle().stroke(Color(0xe3d5d5), lineWidth: 1)
+                                }
+                            Text(SalesManViewModel(salesman: item).capital)
+                                .font(.custom("Roboto-Bold", size: 24))
                         }
+                        .padding(.leading,-16)
+                        .listRowBackground(Color.clear) // Deaktiviert die Hervorhebung der Zeile
+                        VStack(alignment: .leading)  {
+                            Text(SalesManViewModel(salesman: item).name)
+                                .font(.custom("Roboto-Regular", size: 16))
+                            Text(SalesManViewModel(salesman: item).zipcodes)
+                                .foregroundColor(.gray)
+                                .font(.custom("Roboto-Regular", size: 16))
+                        }
+                        Spacer()
                         Button(action: {
                             viewModel.setNotExpanded(item: item)
-                        }) {
-                            Text("Toggle 1 Zeile")
+                        })  
+                        {
+                            Image("down")
+                                .resizable()
+                                .frame(width: 16, height: 10)
+                                 
                         }
+                        .frame(width: 10)
+                       
                     }
                 }
                 else {
                     HStack {
-                        Text(SalesManViewModel(salesman: item).capital)
-                        Text(SalesManViewModel(salesman: item).name)
+                        ZStack {
+                            Circle()
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(Color(0xefefef)) // Grauer Kreis
+                                .overlay {
+                                    Circle().stroke(Color(0xe3d5d5), lineWidth: 1)
+                                }
+                            
+                            Text(SalesManViewModel(salesman: item).capital)
+                                .font(.custom("Roboto-Bold", size: 24))
+                        }
+                        .padding(.leading,-16)
+                        .listRowBackground(Color.clear) // Deaktiviert die Hervorhebung der Zeile
+                        VStack {
+                            Text(SalesManViewModel(salesman: item).name)
+                                .font(.custom("Roboto-Regular", size: 16))
+                        }
+                        Spacer()
                         Button(action: {
                             viewModel.setExpanded(item: item)
-                        }) {
-                            Text("Toggle 2 Zeilen")
+                        })
+                        { Image("right")
+                            .resizable()
+                            .frame(width: 10, height: 16)
+                             
                         }
+                        .frame(width: 10)
                     }
                 }
             }
