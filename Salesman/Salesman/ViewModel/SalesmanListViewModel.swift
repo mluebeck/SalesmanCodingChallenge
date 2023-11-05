@@ -12,10 +12,11 @@ import Combine
 class SalesmanListViewModel: ObservableObject {
     @Published var filterText = ""
     @Published var filteredItems: [Salesman] = [Salesman]()
-    var salesmenStore : SalesmenStore
-    
-    private var cancellable: AnyCancellable?
+    @Published var expandedDict = [Salesman : Bool]()
 
+    var salesmenStore : SalesmenStore
+    private var cancellable: AnyCancellable?
+    
     init(salesmenStore:SalesmenStore) {
         self.salesmenStore = salesmenStore
         self.filteredItems = salesmenStore.getItems()
@@ -25,7 +26,22 @@ class SalesmanListViewModel: ObservableObject {
                 self?.filterItems()
             }
     }
-
+    func isExpanded(item:Salesman) -> Bool {
+        if let item = self.expandedDict[item] {
+            return item
+        } else {
+            return false
+        }
+    }
+    
+    func setExpanded(item:Salesman) {
+        self.expandedDict[item] = true
+    }
+    
+    func setNotExpanded(item:Salesman) {
+        self.expandedDict[item] = false
+    }
+    
     func filterItems() {
         if filterText.isEmpty {
             filteredItems = salesmenStore.salesmen
@@ -33,5 +49,4 @@ class SalesmanListViewModel: ObservableObject {
             filteredItems = salesmenStore.filter(postcodeExpression: filterText)
         }
     }
-
 }
