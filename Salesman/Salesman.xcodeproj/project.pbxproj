@@ -97,11 +97,11 @@
 		8CB5A01A2AF7A4BA002BAEF9 /* Salesman */ = {
 			isa = PBXGroup;
 			children = (
+				8CB5A0482AF7AA14002BAEF9 /* Model */,
 				8CB5A01B2AF7A4BA002BAEF9 /* SalesmanApp.swift */,
 				8CB5A01D2AF7A4BA002BAEF9 /* ContentView.swift */,
 				8CB5A01F2AF7A4BB002BAEF9 /* Assets.xcassets */,
 				8CB5A0212AF7A4BB002BAEF9 /* Preview Content */,
-				8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */,
 			);
 			path = Salesman;
 			sourceTree = "<group>";
@@ -129,6 +129,14 @@
 				8CB5A0382AF7A4BB002BAEF9 /* SalesmanUITestsLaunchTests.swift */,
 			);
 			path = SalesmanUITests;
+			sourceTree = "<group>";
+		};
+		8CB5A0482AF7AA14002BAEF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
