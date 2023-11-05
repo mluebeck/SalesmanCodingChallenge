@@ -37,7 +37,7 @@ public class SalesmenStore {
         var resultSalesmen = [Salesman]()
         self.salesmen.forEach {
             let result = $0.areas.filter {
-                return $0.starts(with: postcodeExpression) || $0.postcodeIsEqual(to:postcodeExpression)
+                return $0.starts(with: postcodeExpression) || $0.postcodeIsMatching(to:postcodeExpression)
             }
             if result.count>0 {
                 resultSalesmen.append($0)

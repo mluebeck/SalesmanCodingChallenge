@@ -9,26 +9,26 @@ import XCTest
 
 final class PostcodeExpressionTests: XCTestCase {
     
-    func test_postcodeIsEqual() throws {
+    func test_postcodeIsMatching() throws {
         var postcode = "123*"
         var postcode2 = "12345"
-        XCTAssertTrue(postcode.postcodeIsEqual(to: postcode2),"\(postcode) is equal to \(postcode2) ")
+        XCTAssertTrue(postcode.postcodeIsMatching(to: postcode2),"\(postcode) is equal to \(postcode2) ")
         
         postcode = "12345"
         postcode2 = "123*"
-        XCTAssertTrue(postcode.postcodeIsEqual(to: postcode2),"\(postcode) is equal to \(postcode2) ")
+        XCTAssertTrue(postcode.postcodeIsMatching(to: postcode2),"\(postcode) is equal to \(postcode2) ")
         
         postcode = "12*"
         postcode2 = "345"
-        XCTAssertFalse(postcode.postcodeIsEqual(to: postcode2),"\(postcode) is not equal to \(postcode2) ")
+        XCTAssertFalse(postcode.postcodeIsMatching(to: postcode2),"\(postcode) is not equal to \(postcode2) ")
 
         postcode = "*"
         postcode2 = "345"
-        XCTAssertTrue(postcode.postcodeIsEqual(to: postcode2),"\(postcode) is equal to \(postcode2) ")
+        XCTAssertTrue(postcode.postcodeIsMatching(to: postcode2),"\(postcode) is equal to \(postcode2) ")
 
         postcode = "3*"
         postcode2 = "345"
-        XCTAssertTrue(postcode.postcodeIsEqual(to: postcode2),"\(postcode) is equal to \(postcode2) ")
+        XCTAssertTrue(postcode.postcodeIsMatching(to: postcode2),"\(postcode) is equal to \(postcode2) ")
     }
     
     func test_postcodeExpressionLengthIsValid() throws {

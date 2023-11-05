@@ -28,7 +28,7 @@ extension String {
         }
     }
     
-    func postcodeIsEqual(to value:String)->Bool {
+    func postcodeIsMatching(to value:String)->Bool {
         if let index = self.firstIndex(of: "*") {
             let teilStringOhneStern = String(self[..<index])
             if teilStringOhneStern.count>value.count {
