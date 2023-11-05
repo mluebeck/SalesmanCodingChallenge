@@ -25,10 +25,15 @@ final class SalesmanTests: XCTestCase {
     
     func test_SalesmenStore_getStoremen_items() throws {
         let store = SalesmenStore()
+        store.createADummySalesman()
         let items = store.getItems()
-        XCTAssertNotNil(items,"Storemen getItems Method returns something")
-        XCTAssertTrue(items.count>=0,"Storemen getItems Method returns zero or more items")
+        XCTAssertTrue(items.count==1,"Storemen getItems Method returns one item")
+    }
     
+    func test_SalesmenStore_returnsSalesmanObjects()throws {
+        let store = SalesmenStore()
+        let items = store.getItems()
+        XCTAssertTrue(items.count>=0,"Storemen getItems Method returns zero or more items")
     }
 
     func testPerformanceExample() throws {
