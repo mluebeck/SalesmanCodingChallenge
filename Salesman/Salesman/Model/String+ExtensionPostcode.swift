@@ -27,4 +27,18 @@ extension String {
             return value
         }
     }
+    
+    func postcodeIsEqual(to value:String)->Bool {
+        if let index = self.firstIndex(of: "*") {
+            let teilStringOhneStern = String(self[..<index])
+            if teilStringOhneStern.count>value.count {
+                return false
+            }
+            return teilStringOhneStern == String(value[..<index])
+        }
+        if let index = value.firstIndex(of: "*") {
+            return String(value[..<index]) == String(self[..<index])
+        }
+        return self == value
+    }
 }
