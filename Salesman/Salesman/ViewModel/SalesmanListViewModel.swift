@@ -46,7 +46,7 @@ class SalesmanListViewModel: ObservableObject {
         if filterText.isEmpty {
             filteredItems = salesmenStore.salesmen
         } else {
-            filteredItems = salesmenStore.filter(postcodeExpression: filterText)
+            filteredItems = salesmenStore.filter(postcodePrefix: filterText)
         }
     }
 }

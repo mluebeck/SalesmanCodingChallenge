@@ -30,14 +30,14 @@ public class SalesmenStore {
         return self
     }
     
-    func filter(postcodeExpression:String)->[Salesman] {
-        if postcodeExpression.count>5 || ( nil == Int(postcodeExpression) && postcodeExpression.count>0 ) {
+    func filter(postcodePrefix:String)->[Salesman] {
+        if postcodePrefix.count>5 || ( nil == Int(postcodePrefix) && postcodePrefix.count>0 ) {
             return []
         }
         var resultSalesmen = [Salesman]()
         self.salesmen.forEach {
             let result = $0.areas.filter {
-                return $0.starts(with: postcodeExpression) || $0.postcodeIsMatching(to:postcodeExpression)
+                return $0.starts(with: postcodePrefix) || $0.postcodeIsMatching(to:postcodePrefix)
             }
             if result.count>0 {
                 resultSalesmen.append($0)
