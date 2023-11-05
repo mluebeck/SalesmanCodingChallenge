@@ -21,6 +21,9 @@
 		8CB5A04D2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */; };
 		8CB5A04E2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */; };
 		8CB5A0532AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */; };
+		8CB5A0552AF7D4D9002BAEF9 /* SalesmanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0542AF7D4D9002BAEF9 /* SalesmanViewModel.swift */; };
+		8CB5A0562AF7D4D9002BAEF9 /* SalesmanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0542AF7D4D9002BAEF9 /* SalesmanViewModel.swift */; };
+		8CB5A0582AF7D89E002BAEF9 /* SalesmanViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0572AF7D89E002BAEF9 /* SalesmanViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,8 @@
 		8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesman.swift; sourceTree = "<group>"; };
 		8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtensionPostcode.swift"; sourceTree = "<group>"; };
 		8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeExpressionTests.swift; sourceTree = "<group>"; };
+		8CB5A0542AF7D4D9002BAEF9 /* SalesmanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanViewModel.swift; sourceTree = "<group>"; };
+		8CB5A0572AF7D89E002BAEF9 /* SalesmanViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,7 @@
 		8CB5A01A2AF7A4BA002BAEF9 /* Salesman */ = {
 			isa = PBXGroup;
 			children = (
+				8CB5A0592AF7D8D5002BAEF9 /* ViewModel */,
 				8CB5A0482AF7AA14002BAEF9 /* Model */,
 				8CB5A01B2AF7A4BA002BAEF9 /* SalesmanApp.swift */,
 				8CB5A01D2AF7A4BA002BAEF9 /* ContentView.swift */,
@@ -127,6 +133,7 @@
 			children = (
 				8CB5A02C2AF7A4BB002BAEF9 /* SalesmanTests.swift */,
 				8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */,
+				8CB5A0572AF7D89E002BAEF9 /* SalesmanViewModelTest.swift */,
 			);
 			path = SalesmanTests;
 			sourceTree = "<group>";
@@ -148,6 +155,14 @@
 				8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8CB5A0592AF7D8D5002BAEF9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5A0542AF7D4D9002BAEF9 /* SalesmanViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +297,7 @@
 			files = (
 				8CB5A01E2AF7A4BA002BAEF9 /* ContentView.swift in Sources */,
 				8CB5A04A2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
+				8CB5A0552AF7D4D9002BAEF9 /* SalesmanViewModel.swift in Sources */,
 				8CB5A04D2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
 				8CB5A01C2AF7A4BA002BAEF9 /* SalesmanApp.swift in Sources */,
 				8CB5A0462AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */,
@@ -294,18 +310,11 @@
 			files = (
 				8CB5A0532AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift in Sources */,
 				8CB5A04B2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
+				8CB5A0562AF7D4D9002BAEF9 /* SalesmanViewModel.swift in Sources */,
+				8CB5A0582AF7D89E002BAEF9 /* SalesmanViewModelTest.swift in Sources */,
 				8CB5A04E2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
 				8CB5A02D2AF7A4BB002BAEF9 /* SalesmanTests.swift in Sources */,
 				8CB5A0472AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8CB5A02E2AF7A4BB002BAEF9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8CB5A0392AF7A4BB002BAEF9 /* SalesmanUITestsLaunchTests.swift in Sources */,
-				8CB5A0372AF7A4BB002BAEF9 /* SalesmanUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

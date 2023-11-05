@@ -49,7 +49,7 @@ final class SalesmanTests: XCTestCase {
     func test_SalesmenStore_generateAndReturnsTestData()throws {
         let store = SalesmenStore()
         let testData = SalesmenStore.createTestData()
-        store.addSalesmen(testData)
+        let _ = store.addSalesmen(testData)
         let items = store.getItems()
         XCTAssertTrue(items.count==testData.count,"SalesmenStore getItems Method returns correct amount of test data")
         XCTAssertTrue(items[0].name == testData[0].name && testData[0].name == "Artem Titarenko", "SalesmenStore getItems Method returns correct first salesman name")
@@ -63,7 +63,6 @@ final class SalesmanTests: XCTestCase {
         XCTAssertTrue(items[3].areas == ["86*"] && testData[3].areas==items[3].areas, "SalesmenStore getItems Method returns correct fourth areas")
         
     }
-    
     
     func test_SalesmenStore_filter_returns_zeroOrMoreStoremen()throws {
         let store = self.makeSalesmenStoreUnderTest()
@@ -80,14 +79,14 @@ final class SalesmanTests: XCTestCase {
         storemen = store.filter(postcodeExpression:"")
         XCTAssertTrue(storemen.count==0, "should find zero storeman because invalid expression")
     }
-     
+    
     //MARK: Helper Methods
     
     private func makeSalesmenStoreUnderTest() -> SalesmenStore {
         let store = SalesmenStore()
         let testData = SalesmenStore.createTestData()
-        store.addSalesmen(testData)
+        let _ = store.addSalesmen(testData)
         return store
     }
-    
 }
+

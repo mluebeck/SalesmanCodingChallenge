@@ -6,7 +6,15 @@
 //
 
 import Foundation
-public class Salesman {
+public class Salesman : Hashable,   Equatable {
+    public static func == (lhs: Salesman, rhs: Salesman) -> Bool {
+        return lhs.name == rhs.name && lhs.areas == rhs.areas
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.name)
+    }
+    
     var name : String
     var areas : [String]
     
