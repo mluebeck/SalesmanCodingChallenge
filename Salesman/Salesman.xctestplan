@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "7948481B-4E2B-4AB2-838B-AE66AD875AD3",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Salesman.xcodeproj",
+      "identifier" : "8CB5A0172AF7A4BA002BAEF9",
+      "name" : "Salesman"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Salesman.xcodeproj",
+        "identifier" : "8CB5A0272AF7A4BB002BAEF9",
+        "name" : "SalesmanTests"
+      }
+    }
+  ],
+  "version" : 1
+}
