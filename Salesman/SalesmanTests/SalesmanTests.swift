@@ -22,6 +22,14 @@ final class SalesmanTests: XCTestCase {
         let store = SalesmenStore()
         XCTAssertNotNil(store,"Store exists")
     }
+    
+    func test_SalesmenStore_getStoremen_items() throws {
+        let store = SalesmenStore()
+        let items = store.getItems()
+        XCTAssertNotNil(items,"Storemen getItems Method returns something")
+        XCTAssertTrue(items.count>=0,"Storemen getItems Method returns zero or more items")
+    
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

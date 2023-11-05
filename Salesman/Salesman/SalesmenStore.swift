@@ -8,5 +8,7 @@
 import Foundation
 
 public class SalesmenStore {
-    
+    func getItems()->[String] {
+        return ["a value"]
+    }
 }
