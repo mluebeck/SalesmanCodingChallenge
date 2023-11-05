@@ -20,6 +20,7 @@
 		8CB5A04B2AF7B7C8002BAEF9 /* Salesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */; };
 		8CB5A04D2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */; };
 		8CB5A04E2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */; };
+		8CB5A0532AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmenStore.swift; sourceTree = "<group>"; };
 		8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesman.swift; sourceTree = "<group>"; };
 		8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtensionPostcode.swift"; sourceTree = "<group>"; };
+		8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeExpressionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				8CB5A02C2AF7A4BB002BAEF9 /* SalesmanTests.swift */,
+				8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */,
 			);
 			path = SalesmanTests;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB5A0532AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift in Sources */,
 				8CB5A04B2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
 				8CB5A04E2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
 				8CB5A02D2AF7A4BB002BAEF9 /* SalesmanTests.swift in Sources */,
