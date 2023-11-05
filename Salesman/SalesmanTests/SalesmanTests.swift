@@ -33,7 +33,25 @@ final class PostcodeExpressionTests: XCTestCase {
     func test_postcodeExpressionIsValid() throws {
         var postcode = "12345"
         XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should pass ")
-        postcode = "abcde"
+        postcode = "0*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
+        postcode = "1*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
+        postcode = "100*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
+        postcode = "12*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
+        postcode = "123*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
+        postcode = "1234*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
+        postcode = "0000*"
+        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
+
+  }
+    
+    func test_postcodeExpressionIsInvalid() throws {
+        var postcode = "abcde"
         XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
         postcode = "abc*"
         XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail")
@@ -45,8 +63,8 @@ final class PostcodeExpressionTests: XCTestCase {
         XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
         postcode = "*abc"
         XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
-        postcode = "100*"
-        XCTAssertTrue(postcode.isValidPostcodeExpression(),"Postcode \(postcode) length should pass ")
+        postcode = "23345*"
+        XCTAssertFalse(postcode.isValidPostcodeExpression(),"Postcode \(postcode) valuation should fail ")
     }
 }
 
@@ -109,6 +127,16 @@ final class SalesmanTests: XCTestCase {
         let store = self.makeSalesmenStoreUnderTest()
         let storemen = store.filter(postcodeExpression:"76133")
         XCTAssertTrue(storemen.count>=0, "find zero or more storeman")
+    }
+    
+    func test_SalesmenStore_filterWithInvalidParameter() throws {
+        let store = self.makeSalesmenStoreUnderTest()
+        var storemen = store.filter(postcodeExpression:"asdff")
+        XCTAssertTrue(storemen.count==0, "should find zero storeman because invalid expression")
+        storemen = store.filter(postcodeExpression:"1234567")
+        XCTAssertTrue(storemen.count==0, "should find zero storeman because invalid expression")
+        storemen = store.filter(postcodeExpression:"")
+        XCTAssertTrue(storemen.count==0, "should find zero storeman because invalid expression")
     }
      
     //MARK: Helper Methods

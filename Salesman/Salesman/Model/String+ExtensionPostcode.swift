@@ -19,7 +19,7 @@ extension String {
             return false
         } else {
             var pattern = "[0-9]{5}"
-            if self.count>0 && self.count<5 {
+            if self.count>0 && self.count<5 || (self.count==5 && self.last=="*"){
                 pattern = "[0-9]{\(self.count-1)}[*]"
             }
             let regex = try! NSRegularExpression(pattern: pattern)
