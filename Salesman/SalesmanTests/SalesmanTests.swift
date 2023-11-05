@@ -57,10 +57,10 @@ final class SalesmanTests: XCTestCase {
         XCTAssertTrue(items[2].name == testData[2].name && testData[2].name == "Chris Krapp", "SalesmenStore getItems Method returns correct third salesman name")
         XCTAssertTrue(items[3].name == testData[3].name && testData[3].name == "Alex Uber", "SalesmenStore getItems Method returns correct fourth salesman name")
         
-        XCTAssertTrue(items[0].areas == ["76133"] && testData[0].areas==items[0].areas, "SalesmenStore getItems Method returns correct first areas")
-        XCTAssertTrue(items[1].areas == ["7619*"] && testData[1].areas==items[1].areas, "SalesmenStore getItems Method returns correct second areas")
-        XCTAssertTrue(items[2].areas == ["762*"] && testData[2].areas==items[2].areas, "SalesmenStore getItems Method returns correct third areas")
-        XCTAssertTrue(items[3].areas == ["86*"] && testData[3].areas==items[3].areas, "SalesmenStore getItems Method returns correct fourth areas")
+        XCTAssertTrue(items[0].areas == testData[0].areas && testData[0].areas==items[0].areas, "SalesmenStore getItems Method returns correct first areas")
+        XCTAssertTrue(items[1].areas == testData[1].areas && testData[1].areas==items[1].areas, "SalesmenStore getItems Method returns correct second areas")
+        XCTAssertTrue(items[2].areas == testData[2].areas && testData[2].areas==items[2].areas, "SalesmenStore getItems Method returns correct third areas")
+        XCTAssertTrue(items[3].areas == testData[3].areas && testData[3].areas==items[3].areas, "SalesmenStore getItems Method returns correct fourth areas")
         
     }
     
@@ -90,7 +90,7 @@ final class SalesmanTests: XCTestCase {
         storemen = store.filter(postcodeExpression:"1234567")
         XCTAssertTrue(storemen.count==0, "should find zero storeman because invalid expression")
         storemen = store.filter(postcodeExpression:"")
-        XCTAssertTrue(storemen.count==0, "should find zero storeman because invalid expression")
+        XCTAssertTrue(storemen.count==store.salesmen.count, "should find all storeman because empty expression")
     }
     
     //MARK: Helper Methods

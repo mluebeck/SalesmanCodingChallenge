@@ -26,6 +26,6 @@ class SalesManViewModel {
     
     init(salesman:Salesman) {
         self.name = salesman.name
-        self.zipcodes = salesman.areas.joined(separator: " ")
+        self.zipcodes = salesman.areas.joined(separator: ", ")
     }
 }
