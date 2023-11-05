@@ -23,6 +23,8 @@
 		8CB5A0532AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */; };
 		8CB5A05E2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A05D2AF7EB92002BAEF9 /* SalesmanListViewModel.swift */; };
 		8CB5A05F2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A05D2AF7EB92002BAEF9 /* SalesmanListViewModel.swift */; };
+		8CB5A0632AF8438B002BAEF9 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0622AF8438B002BAEF9 /* Color+Extensions.swift */; };
+		8CB5A0642AF8438B002BAEF9 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0622AF8438B002BAEF9 /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtensionPostcode.swift"; sourceTree = "<group>"; };
 		8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeExpressionTests.swift; sourceTree = "<group>"; };
 		8CB5A05D2AF7EB92002BAEF9 /* SalesmanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanListViewModel.swift; sourceTree = "<group>"; };
+		8CB5A0622AF8438B002BAEF9 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 				8CB5A0602AF7F8D1002BAEF9 /* Views */,
 				8CB5A0592AF7D8D5002BAEF9 /* ViewModel */,
 				8CB5A0482AF7AA14002BAEF9 /* Model */,
+				8CB5A0612AF84342002BAEF9 /* Extensions */,
 				8CB5A01F2AF7A4BB002BAEF9 /* Assets.xcassets */,
 				8CB5A0212AF7A4BB002BAEF9 /* Preview Content */,
 			);
@@ -168,6 +172,15 @@
 				8CB5A01D2AF7A4BA002BAEF9 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8CB5A0612AF84342002BAEF9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */,
+				8CB5A0622AF8438B002BAEF9 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +317,7 @@
 				8CB5A04A2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
 				8CB5A05E2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */,
 				8CB5A04D2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
+				8CB5A0632AF8438B002BAEF9 /* Color+Extensions.swift in Sources */,
 				8CB5A01C2AF7A4BA002BAEF9 /* SalesmanApp.swift in Sources */,
 				8CB5A0462AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */,
 			);
@@ -317,6 +331,7 @@
 				8CB5A04B2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
 				8CB5A05F2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */,
 				8CB5A04E2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
+				8CB5A0642AF8438B002BAEF9 /* Color+Extensions.swift in Sources */,
 				8CB5A02D2AF7A4BB002BAEF9 /* SalesmanTests.swift in Sources */,
 				8CB5A0472AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */,
 			);
