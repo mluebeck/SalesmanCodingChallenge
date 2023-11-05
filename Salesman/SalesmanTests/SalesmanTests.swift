@@ -67,30 +67,42 @@ final class SalesmanTests: XCTestCase {
     func test_SalesmenStore_filter_returns_4Storemen()throws {
         let store = self.makeSalesmenStoreUnderTest()
         let storemen = store.filter(postcodeExpression:"76")
-        XCTAssertTrue(storemen.count==3, "should find 3 storeman, found \(storemen.count)")
+        XCTAssertTrue(storemen.count==4, "should find 4 storeman, found \(storemen.count)")
     }
     
     func test_SalesmenStore_filter_returns_1Storemen()throws {
         let store = self.makeSalesmenStoreUnderTest()
         let storemen = store.filter(postcodeExpression:"86")
-        XCTAssertTrue(storemen.count==1, "should find 1 storeman, found \(storemen.count)")
+        XCTAssertTrue(storemen.count==3, "should find 3 storeman, found \(storemen.count)")
     }
     
     func test_SalesmenStore_filter_returnsSuitableElements() throws {
         let store = self.makeSalesmenStoreUnderTest()
         let storemen = store.filter(postcodeExpression: "1")
-        XCTAssertTrue(storemen.count==0, "find zero   storeman")
+        XCTAssertTrue(storemen.count==6, "should find zero storeman, found \(storemen.count)")
 
     }
     
     func test_SalesmenStore_filterWithInvalidParameter() throws {
         let store = self.makeSalesmenStoreUnderTest()
         var storemen = store.filter(postcodeExpression:"asdff")
-        XCTAssertTrue(storemen.count==0, "should find zero storeman because invalid expression")
+        XCTAssertTrue(storemen.count==0, "should find zero storeman because invalid expression, found \(storemen.count)")
         storemen = store.filter(postcodeExpression:"1234567")
-        XCTAssertTrue(storemen.count==0, "should find zero storeman because invalid expression")
+        XCTAssertTrue(storemen.count==0, "should find zero storeman because invalid expression,  found \(storemen.count)")
         storemen = store.filter(postcodeExpression:"")
-        XCTAssertTrue(storemen.count==store.salesmen.count, "should find all storeman because empty expression")
+        XCTAssertTrue(storemen.count==store.salesmen.count, "should find all storeman because empty expression,  found \(storemen.count)")
+    }
+    
+    func test_filterWithPlaceholderInAreaList() throws {
+        let store = self.makeSalesmenStoreUnderTest()
+        let storemen = store.filter(postcodeExpression:"12345")
+        XCTAssertEqual(storemen.count,6, "should find all storeman because all have 12345, either direct as number or als number with placeholder")
+    }
+    
+    func test_salesmanSignatureAndZipcodes() throws {
+        let salesMan = Salesman(name: "Mario Rotz", areas: ["01234","01235","12345"])
+        XCTAssertTrue(salesMan.zipcodes==salesMan.areas.joined(separator: ", "))
+        XCTAssertTrue(salesMan.signature == salesMan.name.prefix(1).uppercased())
     }
     
     //MARK: Helper Methods
