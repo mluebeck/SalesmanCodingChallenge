@@ -25,8 +25,9 @@ public class SalesmenStore {
         self.salesmen.append(value)
     }
     
-    func addSalesmen(_ array:[Salesman]) {
+    func addSalesmen(_ array:[Salesman])->SalesmenStore {
         self.salesmen.append(contentsOf: array)
+        return self
     }
     
     func filter(postcodeExpression:String)->[Salesman] {
