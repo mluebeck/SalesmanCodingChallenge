@@ -10,10 +10,10 @@ import Combine
 
 
 
-struct ContentView: View {
+public struct ContentView: View {
     
-    @StateObject var viewModel : SalesmanListViewModel
-    var body: some View {
+    @StateObject  public var viewModel : SalesmanListViewModel
+    public var body: some View {
         NavigationView {
             
             VStack {

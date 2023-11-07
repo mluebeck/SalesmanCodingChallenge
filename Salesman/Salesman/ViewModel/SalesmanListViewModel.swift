@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 
-class SalesmanListViewModel: ObservableObject {
+public class SalesmanListViewModel: ObservableObject {
     @Published var filterText = ""
     @Published var filteredItems: [Salesman] = [Salesman]()
     @Published var expandedDict = [Salesman : Bool]()
@@ -17,7 +17,7 @@ class SalesmanListViewModel: ObservableObject {
     var salesmenStore : SalesmenStore
     private var cancellable: AnyCancellable?
     
-    init(salesmenStore:SalesmenStore) {
+    public init(salesmenStore:SalesmenStore) {
         self.salesmenStore = salesmenStore
         self.filteredItems = salesmenStore.getItems()
         cancellable = $filterText
