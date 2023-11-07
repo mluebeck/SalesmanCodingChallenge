@@ -97,7 +97,7 @@ struct SnapshotConfiguration {
     
     static func iPhone8(style: UIUserInterfaceStyle, contentSize: UIContentSizeCategory = .medium) -> SnapshotConfiguration {
         return SnapshotConfiguration(
-            size: CGSize(width: 667, height: 375),
+            size: CGSize(width: 375, height: 667),
             safeAreaInsets: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0),
             layoutMargins: UIEdgeInsets(top: 20, left: 16, bottom: 0, right: 16),
             traitCollection: UITraitCollection(traitsFrom: [
