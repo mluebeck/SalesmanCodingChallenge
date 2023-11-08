@@ -24,6 +24,39 @@ Da nur das UI-Design für Android verfügbar war, habe ich mich soweit es ging u
 
 
 
+Hier die Zusammenfassung der Code Review:
+
+1. UI (OK)
+2. Async Code Handling (TODO)
+3. MVVM (TODO)
+4. Business logic (OK)
+5. Testing (OK)
+
+-> Bestanden 
+Und hier die detaillierte Code Review:
+
+Gut:
+- readme
+- suchlogik ist gut bis auf sternchen in suchleiste nicht beachtet, aber auch in der readme erklärt
+- debounce delay für die suche
+- dependencies wurden im init reingegeben
+
+Anmerkungen:
+- keine animation
+- ui nicht ganz so nach design
+- viewmodel ist kein @MainActor
+- formatting noch ok
+- `filterItems` und `salesmenStore` könnten `private` sein
+- würde sagen, dass die `createTestDataForPlaceholderTests` und `createTestData` funcs nicht in den `SalesmenStore` gehören
+- keine views ausgelagert
+- kein async await
+- `Salesman` model ist eine class statt struct
+- kein codable verwendet
+- `SalesmenStore` hält die daten und auch die logik, statt service + repo
+- kein `guard` verwendet
+- tests sind ok (sternchen als sucheingabe nicht beachtet, manchmal sind mehrere testfälle in eine func)
+- mal deutsche comments und variablen
+ 
 
 
 
