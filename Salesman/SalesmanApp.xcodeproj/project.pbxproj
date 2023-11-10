@@ -11,16 +11,14 @@
 		8C907CCB2AF94DE200D9F9BC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C907CCA2AF94DE200D9F9BC /* XCTest.framework */; platformFilter = ios; };
 		8C907CCE2AFAE0A300D9F9BC /* snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 8C907CCD2AFAE0A300D9F9BC /* snapshots */; };
 		8C907CCF2AFAE0A300D9F9BC /* snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 8C907CCD2AFAE0A300D9F9BC /* snapshots */; };
+		8C907D6D2AFDB9D800D9F9BC /* SalesmanModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C907D662AFDB42E00D9F9BC /* SalesmanModel.framework */; };
+		8C907D6E2AFDB9D800D9F9BC /* SalesmanModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C907D662AFDB42E00D9F9BC /* SalesmanModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C907D712AFE8F6300D9F9BC /* SalesmanModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C907D662AFDB42E00D9F9BC /* SalesmanModel.framework */; };
 		8CB5A01C2AF7A4BA002BAEF9 /* SalesmanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A01B2AF7A4BA002BAEF9 /* SalesmanApp.swift */; };
 		8CB5A01E2AF7A4BA002BAEF9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A01D2AF7A4BA002BAEF9 /* ContentView.swift */; };
 		8CB5A0202AF7A4BB002BAEF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5A01F2AF7A4BB002BAEF9 /* Assets.xcassets */; };
 		8CB5A0232AF7A4BB002BAEF9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB5A0222AF7A4BB002BAEF9 /* Preview Assets.xcassets */; };
 		8CB5A02D2AF7A4BB002BAEF9 /* SalesmanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A02C2AF7A4BB002BAEF9 /* SalesmanTests.swift */; };
-		8CB5A0462AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */; };
-		8CB5A04A2AF7B7C8002BAEF9 /* Salesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */; };
-		8CB5A04B2AF7B7C8002BAEF9 /* Salesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */; };
-		8CB5A04D2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */; };
-		8CB5A04E2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */; };
 		8CB5A0532AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */; };
 		8CB5A05E2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A05D2AF7EB92002BAEF9 /* SalesmanListViewModel.swift */; };
 		8CB5A0632AF8438B002BAEF9 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB5A0622AF8438B002BAEF9 /* Color+Extensions.swift */; };
@@ -37,10 +35,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8C907D6F2AFDB9D800D9F9BC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C907D6E2AFDB9D800D9F9BC /* SalesmanModel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8C907CC62AF94C6D00D9F9BC /* SalesmanSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanSnapshotTests.swift; sourceTree = "<group>"; };
 		8C907CCA2AF94DE200D9F9BC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8C907CCD2AFAE0A300D9F9BC /* snapshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = snapshots; sourceTree = "<group>"; };
+		8C907D662AFDB42E00D9F9BC /* SalesmanModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SalesmanModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB5A0182AF7A4BA002BAEF9 /* Salesman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Salesman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB5A01B2AF7A4BA002BAEF9 /* SalesmanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanApp.swift; sourceTree = "<group>"; };
 		8CB5A01D2AF7A4BA002BAEF9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,9 +61,6 @@
 		8CB5A0222AF7A4BB002BAEF9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8CB5A0282AF7A4BB002BAEF9 /* SalesmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalesmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB5A02C2AF7A4BB002BAEF9 /* SalesmanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanTests.swift; sourceTree = "<group>"; };
-		8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmenStore.swift; sourceTree = "<group>"; };
-		8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesman.swift; sourceTree = "<group>"; };
-		8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtensionPostcode.swift"; sourceTree = "<group>"; };
 		8CB5A0522AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeExpressionTests.swift; sourceTree = "<group>"; };
 		8CB5A05D2AF7EB92002BAEF9 /* SalesmanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesmanListViewModel.swift; sourceTree = "<group>"; };
 		8CB5A0622AF8438B002BAEF9 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -62,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C907D6D2AFDB9D800D9F9BC /* SalesmanModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C907D712AFE8F6300D9F9BC /* SalesmanModel.framework in Frameworks */,
 				8C907CCB2AF94DE200D9F9BC /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,6 +91,7 @@
 		8C907CC92AF94DE200D9F9BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C907D662AFDB42E00D9F9BC /* SalesmanModel.framework */,
 				8C907CCA2AF94DE200D9F9BC /* XCTest.framework */,
 			);
 			name = Frameworks;
@@ -110,7 +123,6 @@
 				8CB5A01B2AF7A4BA002BAEF9 /* SalesmanApp.swift */,
 				8CB5A0602AF7F8D1002BAEF9 /* Views */,
 				8CB5A0592AF7D8D5002BAEF9 /* ViewModel */,
-				8CB5A0482AF7AA14002BAEF9 /* Model */,
 				8CB5A0612AF84342002BAEF9 /* Extensions */,
 				8CB5A01F2AF7A4BB002BAEF9 /* Assets.xcassets */,
 				8CB5A0212AF7A4BB002BAEF9 /* Preview Content */,
@@ -137,15 +149,6 @@
 			path = SalesmanTests;
 			sourceTree = "<group>";
 		};
-		8CB5A0482AF7AA14002BAEF9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8CB5A0452AF7A78E002BAEF9 /* SalesmenStore.swift */,
-				8CB5A0492AF7B7C8002BAEF9 /* Salesman.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		8CB5A0592AF7D8D5002BAEF9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +168,6 @@
 		8CB5A0612AF84342002BAEF9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8CB5A04C2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift */,
 				8CB5A0622AF8438B002BAEF9 /* Color+Extensions.swift */,
 			);
 			path = Extensions;
@@ -181,6 +183,7 @@
 				8CB5A0142AF7A4BA002BAEF9 /* Sources */,
 				8CB5A0152AF7A4BA002BAEF9 /* Frameworks */,
 				8CB5A0162AF7A4BA002BAEF9 /* Resources */,
+				8C907D6F2AFDB9D800D9F9BC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,12 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CB5A01E2AF7A4BA002BAEF9 /* ContentView.swift in Sources */,
-				8CB5A04A2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
 				8CB5A05E2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */,
-				8CB5A04D2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
 				8CB5A0632AF8438B002BAEF9 /* Color+Extensions.swift in Sources */,
 				8CB5A01C2AF7A4BA002BAEF9 /* SalesmanApp.swift in Sources */,
-				8CB5A0462AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CB5A0532AF7CFD4002BAEF9 /* PostcodeExpressionTests.swift in Sources */,
-				8CB5A04B2AF7B7C8002BAEF9 /* Salesman.swift in Sources */,
-				8CB5A04E2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
 				8C907CC72AF94C6D00D9F9BC /* SalesmanSnapshotTests.swift in Sources */,
 				8CB5A0642AF8438B002BAEF9 /* Color+Extensions.swift in Sources */,
 				8CB5A02D2AF7A4BB002BAEF9 /* SalesmanTests.swift in Sources */,

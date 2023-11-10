@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine 
 
-
+import SalesmanModel
 
 public struct ContentView: View {
     

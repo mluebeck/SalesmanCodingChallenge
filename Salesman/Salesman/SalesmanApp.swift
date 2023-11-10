@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import SalesmanModel
 @main
 struct SalesmanApp: App {
     var body: some Scene {

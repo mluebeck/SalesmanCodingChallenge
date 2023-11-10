@@ -10,27 +10,30 @@ import Foundation
 
 
 public class SalesmenStore {
-    var salesmen = [Salesman]()
     
-    func getItems()->[Salesman] {
+    public init() {}
+    
+    public var salesmen = [Salesman]()
+    
+    public func getItems()->[Salesman] {
         return salesmen
     }
     
-    func createADummySalesman() {
+    public func createADummySalesman() {
         let salesman = Salesman.createDefaultSalesman()
         self.addSalesman(salesman)
     }
     
-    func addSalesman(_ value:Salesman ) {
+    public func addSalesman(_ value:Salesman ) {
         self.salesmen.append(value)
     }
     
-    func addSalesmen(_ array:[Salesman])->SalesmenStore {
+    public func addSalesmen(_ array:[Salesman])->SalesmenStore {
         self.salesmen.append(contentsOf: array)
         return self
     }
     
-    func filter(postcodePrefix:String)->[Salesman] {
+    public func filter(postcodePrefix:String)->[Salesman] {
         if postcodePrefix.count>5 || ( nil == Int(postcodePrefix) && postcodePrefix.count>0 ) {
             return []
         }
@@ -46,7 +49,7 @@ public class SalesmenStore {
         return resultSalesmen
     }
     
-    static func createTestDataForPlaceholderTests() -> [Salesman] {
+    public static func createTestDataForPlaceholderTests() -> [Salesman] {
         var array = [Salesman]()
         array.append(Salesman(name: "Artem Titarenko", areas: ["76133","75000","61000", "23613","12345"]))
         array.append(Salesman(name: "Bernd Schmitt", areas: ["7619*","1234*"]))
@@ -57,7 +60,7 @@ public class SalesmenStore {
         return array
     }
     
-    static func createTestData() -> [Salesman] {
+    public static func createTestData() -> [Salesman] {
         var array = [Salesman]()
         array.append(Salesman(name: "Artem Titarenko", areas: ["76133"]))
         array.append(Salesman(name: "Bernd Schmitt", areas: ["7619*"]))

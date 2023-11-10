@@ -15,19 +15,19 @@ public class Salesman : Hashable,   Equatable {
         hasher.combine(self.name + self.zipcodes)
     }
     
-    var name : String
-    var areas : [String]
+    public var name : String
+    public var areas : [String]
     
-    init(name: String, areas: [String]) {
+    public init(name: String, areas: [String]) {
         self.name = name
         self.areas = areas
     }
     
-    var zipcodes : String {
+    public var zipcodes : String {
         return self.areas.joined(separator: ", ")
     }
     
-    var signature : String {
+    public var signature : String {
         if name.count>0 {
             return String(name.prefix(1)).uppercased()
         } else {
@@ -35,7 +35,7 @@ public class Salesman : Hashable,   Equatable {
         }
     }
     
-    static func createDefaultSalesman() -> Salesman {
+    public static func createDefaultSalesman() -> Salesman {
         return Salesman(name: "Vorname Nachname", areas: [])
     }
 }

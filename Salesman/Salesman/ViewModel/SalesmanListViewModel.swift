@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Combine
-
+import SalesmanModel
 
 public class SalesmanListViewModel: ObservableObject {
     @Published var filterText = ""
