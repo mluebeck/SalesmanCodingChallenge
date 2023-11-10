@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8C907CC72AF94C6D00D9F9BC /* SalesmanSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C907CC62AF94C6D00D9F9BC /* SalesmanSnapshotTests.swift */; };
-		8C907CC82AF94DBF00D9F9BC /* SalesmanSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C907CC62AF94C6D00D9F9BC /* SalesmanSnapshotTests.swift */; };
 		8C907CCB2AF94DE200D9F9BC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C907CCA2AF94DE200D9F9BC /* XCTest.framework */; platformFilter = ios; };
 		8C907CCE2AFAE0A300D9F9BC /* snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 8C907CCD2AFAE0A300D9F9BC /* snapshots */; };
 		8C907CCF2AFAE0A300D9F9BC /* snapshots in Resources */ = {isa = PBXBuildFile; fileRef = 8C907CCD2AFAE0A300D9F9BC /* snapshots */; };
@@ -229,7 +228,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8CB5A0132AF7A4BA002BAEF9 /* Build configuration list for PBXProject "Salesman" */;
+			buildConfigurationList = 8CB5A0132AF7A4BA002BAEF9 /* Build configuration list for PBXProject "SalesmanApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -279,7 +278,6 @@
 				8CB5A05E2AF7EB92002BAEF9 /* SalesmanListViewModel.swift in Sources */,
 				8CB5A04D2AF7B7F2002BAEF9 /* String+ExtensionPostcode.swift in Sources */,
 				8CB5A0632AF8438B002BAEF9 /* Color+Extensions.swift in Sources */,
-				8C907CC82AF94DBF00D9F9BC /* SalesmanSnapshotTests.swift in Sources */,
 				8CB5A01C2AF7A4BA002BAEF9 /* SalesmanApp.swift in Sources */,
 				8CB5A0462AF7A78E002BAEF9 /* SalesmenStore.swift in Sources */,
 			);
@@ -529,7 +527,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8CB5A0132AF7A4BA002BAEF9 /* Build configuration list for PBXProject "Salesman" */ = {
+		8CB5A0132AF7A4BA002BAEF9 /* Build configuration list for PBXProject "SalesmanApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CB5A03A2AF7A4BB002BAEF9 /* Debug */,
