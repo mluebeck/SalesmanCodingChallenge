@@ -7,30 +7,11 @@
 
 import XCTest
 import SwiftUI
-
+import SalesmanModel
 @testable import Salesman
 
+ 
 
-final class SalesmanSnapshotTests: XCTestCase {
-    var viewController: UIViewController!
-    
-    override func setUpWithError() throws {
-        try super.setUpWithError()
-        let salesmanmodel = SalesmanListViewModel(salesmenStore:SalesmenStore().addSalesmen(SalesmenStore.createTestData()))
-        let bookDetailView = ContentView(viewModel:salesmanmodel)
-        viewController = UIHostingController(rootView: bookDetailView)
-        viewController.setNeedsUpdateOfSupportedInterfaceOrientations()
-    }
-    
-    override func tearDownWithError() throws {
-        try super.tearDownWithError()
-        viewController = nil
-    }
-    
-    func testBookDetailViewOniPhone() throws {
-        assert(snapshot: viewController.snapshot(for: .iPhone8(style: .light)), named: "IMAGE_COMMENTS_light")
-    }
-}
 extension XCTestCase {
     
     func assert(snapshot: UIImage, named name: String, file: StaticString = #filePath, line: UInt = #line) {
