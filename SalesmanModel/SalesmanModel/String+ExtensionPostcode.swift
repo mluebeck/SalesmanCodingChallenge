@@ -7,14 +7,14 @@
 
 import Foundation
 extension NSRegularExpression {
-    func matches(_ string: String) -> Bool {
+    public func matches(_ string: String) -> Bool {
         let range = NSRange(location: 0, length: string.utf16.count)
         return firstMatch(in: string, options: [], range: range) != nil
     }
 }
 
 extension String {
-    func isValidPostcodeExpression()->Bool {
+    public func isValidPostcodeExpression()->Bool {
         if self.count==0 || self.count>5 || self.starts(with: "00"){
             return false
         } else {
@@ -28,7 +28,7 @@ extension String {
         }
     }
     
-    func postcodeIsMatching(to value:String)->Bool {
+    public func postcodeIsMatching(to value:String)->Bool {
         if let index = self.firstIndex(of: "*") {
             let teilStringOhneStern = String(self[..<index])
             if teilStringOhneStern.count>value.count {

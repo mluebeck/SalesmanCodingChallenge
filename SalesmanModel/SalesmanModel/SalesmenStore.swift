@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 public class SalesmenStore {
     
     public init() {}

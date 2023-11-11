@@ -14,6 +14,7 @@
 		8C907D642AFDB3FE00D9F9BC /* Salesman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C907D622AFDB3FE00D9F9BC /* Salesman.swift */; };
 		8C907D652AFDB3FE00D9F9BC /* SalesmenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C907D632AFDB3FE00D9F9BC /* SalesmenStore.swift */; };
 		8C907D692AFDB52400D9F9BC /* String+ExtensionPostcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C907D682AFDB52400D9F9BC /* String+ExtensionPostcode.swift */; };
+		8C907E422AFEF9D200D9F9BC /* PostcodeExpressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C907E412AFEF9D200D9F9BC /* PostcodeExpressionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		8C907D622AFDB3FE00D9F9BC /* Salesman.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salesman.swift; sourceTree = "<group>"; };
 		8C907D632AFDB3FE00D9F9BC /* SalesmenStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesmenStore.swift; sourceTree = "<group>"; };
 		8C907D682AFDB52400D9F9BC /* String+ExtensionPostcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ExtensionPostcode.swift"; sourceTree = "<group>"; };
+		8C907E412AFEF9D200D9F9BC /* PostcodeExpressionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostcodeExpressionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		8C907D562AFDB37200D9F9BC /* SalesmanModelTests */ = {
 			isa = PBXGroup;
 			children = (
+				8C907E412AFEF9D200D9F9BC /* PostcodeExpressionTests.swift */,
 				8C907D572AFDB37200D9F9BC /* SalesmanModelTests.swift */,
 			);
 			path = SalesmanModelTests;
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C907E422AFEF9D200D9F9BC /* PostcodeExpressionTests.swift in Sources */,
 				8C907D582AFDB37200D9F9BC /* SalesmanModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
