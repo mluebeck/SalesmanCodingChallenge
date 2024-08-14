@@ -1,4 +1,5 @@
-# SalesmanCodingChallenge
+# SalesmanCodingChallenge 
+(bei 1und1, 7. November 2023)
 
 Hallo und Danke schön für diese interessante Aufgabe! 
 
